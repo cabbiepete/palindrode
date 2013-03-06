@@ -45,9 +45,10 @@ exports['test'] = {
     test.done();
   },
   'returns false when passed non-string values': function(test) {
-    test.expect(2);
+    test.expect(3);
     test.equal(palindrode.test(1234), false, 'should not accept numbers');
     test.equal(palindrode.test(), false, 'should not accept undefined');
+    test.equal(palindrode.test(false), false, 'should not accept false');
     test.done();
-  }
+  },
 };
